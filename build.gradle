@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'groovy'
+    id 'com.github.johnrengelman.shadow' version '6.0.0'
+}
+
+mainClassName = 'com.example.jda.Bot'
+version '1.0'
+sourceCompatibility = 1.8
+
+repositories {
+    maven {
+        name 'm2-dv8tion'
+        url 'https://m2.dv8tion.net/releases'
+    }
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy:3.0.8'
+    implementation 'net.dv8tion:JDA:4.3.0_309'
+}
+
+compileJava.options.encoding = 'UTF-8'
